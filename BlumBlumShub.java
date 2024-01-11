@@ -3,14 +3,12 @@ public class BlumBlumShub {
     public static void main(String[] args){
         //implementacion de un generador de numeros pseudoaleatorios
         //con el algoritmo blum blum shub
-        int period=10,a=121,c=553,m=177;
-        float xi=0,seed=23,ramdomNumber=0;
+        int period=10,m=177,xi=0,seed=23;
 
         for(int ite=0;ite<period;ite ++){
-            xi=((a*seed)+c)%m;
+            xi=(seed*seed)%m;
             seed=xi;
-            ramdomNumber=xi/(m-1);
-            System.out.println(ramdomNumber);
+            System.out.println(xi);
         }
     }
 }
